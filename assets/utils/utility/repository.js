@@ -87,7 +87,7 @@ const getLanguageData = function (repo, languageCode) {
 
 const isEditorLibrary = function (libraryJson) {
   const machineName = libraryJson.machineName;
-  return (machineName.startsWith('H5PEditor') || machineName === 'H5P.DragNBar') &&
+  return (machineName.startsWith('H5PEditor') || machineName === 'DragNBar') &&
          libraryJson.runnable === 0;
 };
 

@@ -8,7 +8,6 @@
         },
         "repoName": "font-awesome",
         "runnable": false,
-        "shortName": "font-awesome",
         "title": "Font Awesome"
     },
     "AdvancedText": {
@@ -20,7 +19,6 @@
         },
         "repoName": "h5p-advanced-text",
         "runnable": false,
-        "shortName": "h5p-advanced-text",
         "title": "Texto"
     },
     "Audio": {
@@ -32,7 +30,6 @@
         },
         "repoName": "h5p-audio",
         "runnable": true,
-        "shortName": "h5p-audio",
         "title": "Audio"
     },
     "Blanks": {
@@ -44,7 +41,6 @@
         },
         "repoName": "h5p-blanks",
         "runnable": true,
-        "shortName": "h5p-blanks",
         "title": "Rellena los blancos"
     },
     "ColorSelector": {
@@ -56,7 +52,6 @@
         },
         "repoName": "h5p-editor-color-selector",
         "runnable": false,
-        "shortName": "h5p-editor-color-selector",
         "title": "Selector de color"
     },
     "DragNBar": {
@@ -68,7 +63,6 @@
         },
         "repoName": "h5p-drag-n-bar",
         "runnable": false,
-        "shortName": "h5p-drag-n-bar",
         "title": "Barra de arrastre"
     },
     "DragNDrop": {
@@ -80,7 +74,6 @@
         },
         "repoName": "h5p-drag-n-drop",
         "runnable": false,
-        "shortName": "h5p-drag-n-drop",
         "title": "Arrastrar y soltar"
     },
     "DragNResize": {
@@ -92,7 +85,6 @@
         },
         "repoName": "h5p-drag-n-resize",
         "runnable": false,
-        "shortName": "h5p-drag-n-resize",
         "title": "Arrastrar y redimensionar"
     },
     "DragQuestion": {
@@ -104,7 +96,6 @@
         },
         "repoName": "h5p-drag-question",
         "runnable": true,
-        "shortName": "h5p-drag-question",
         "title": "Arrastrar pregunta"
     },
     "DragQuestionEditor": {
@@ -116,7 +107,6 @@
         },
         "repoName": "h5p-editor-drag-question",
         "runnable": false,
-        "shortName": "h5p-editor-drag-question",
         "title": "Arrastrar editor de preguntas"
     },
     "DragText": {
@@ -128,7 +118,6 @@
         },
         "repoName": "h5p-drag-text",
         "runnable": true,
-        "shortName": "h5p-drag-text",
         "title": "Arrastrar texto"
     },
     "Duration": {
@@ -140,7 +129,6 @@
         },
         "repoName": "h5p-editor-duration",
         "runnable": false,
-        "shortName": "h5p-editor-duration",
         "title": "Duración"
     },
     "FontIcons": {
@@ -152,7 +140,6 @@
         },
         "repoName": "h5p-font-icons",
         "runnable": false,
-        "shortName": "h5p-font-icons",
         "title": "Íconos tipográficos"
     },
     "GoToQuestion": {
@@ -164,7 +151,6 @@
         },
         "repoName": "h5p-go-to-question",
         "runnable": false,
-        "shortName": "h5p-go-to-question",
         "title": "Vínculos"
     },
     "GuidedTour": {
@@ -176,7 +162,6 @@
         },
         "repoName": "h5p-guided-tour",
         "runnable": false,
-        "shortName": "h5p-guided-tour",
         "title": "Visita guiada"
     },
     "Image": {
@@ -188,7 +173,6 @@
         },
         "repoName": "h5p-image",
         "runnable": false,
-        "shortName": "h5p-image",
         "title": "Imagen"
     },
     "InteractiveVideo": {
@@ -200,7 +184,6 @@
         },
         "repoName": "h5p-interactive-video",
         "runnable": true,
-        "shortName": "h5p-interactive-video",
         "title": "Video interactivo"
     },
     "InteractiveVideoEditor": {
@@ -212,7 +195,6 @@
         },
         "repoName": "h5p-editor-interactive-video",
         "runnable": false,
-        "shortName": "h5p-editor-interactive-video",
         "title": "Editor de video interactivo"
     },
     "JoubelUI": {
@@ -224,7 +206,6 @@
         },
         "repoName": "h5p-joubel-ui",
         "runnable": false,
-        "shortName": "h5p-joubel-ui",
         "title": "IU Joubel"
     },
     "jQuery.ui": {
@@ -236,7 +217,6 @@
         },
         "repoName": "jquery-ui",
         "runnable": false,
-        "shortName": "jquery-ui",
         "title": "IU"
     },
     "Link": {
@@ -248,7 +228,6 @@
         },
         "repoName": "h5p-link",
         "runnable": false,
-        "shortName": "h5p-link",
         "title": "Enlace"
     },
     "MarkTheWords": {
@@ -260,7 +239,6 @@
         },
         "repoName": "h5p-mark-the-words",
         "runnable": true,
-        "shortName": "h5p-mark-the-words",
         "title": "Marcar palabras"
     },
     "MultiChoice": {
@@ -272,7 +250,6 @@
         },
         "repoName": "h5p-multi-choice",
         "runnable": true,
-        "shortName": "h5p-multi-choice",
         "title": "Opción múltiple"
     },
     "Nil": {
@@ -284,7 +261,6 @@
         },
         "repoName": "h5p-nil",
         "runnable": false,
-        "shortName": "h5p-nil",
         "title": "Etiqueta"
     },
     "OpenEndedQuestion": {
@@ -296,7 +272,6 @@
         },
         "repoName": "h5p-open-ended-question",
         "runnable": false,
-        "shortName": "h5p-open-ended-question",
         "title": "Pregunta de respuesta abierta"
     },
     "Question": {
@@ -309,7 +284,6 @@
         "org": "h5p",
         "repoName": "h5p-question",
         "runnable": false,
-        "shortName": "h5p-question",
         "title": "Pregunta"
     },
     "Questionnaire": {
@@ -321,7 +295,6 @@
         },
         "repoName": "h5p-questionnaire",
         "runnable": true,
-        "shortName": "h5p-questionnaire",
         "title": "Cuestionario"
     },
     "RadioGroup": {
@@ -333,7 +306,6 @@
         },
         "repoName": "h5p-editor-radio-group",
         "runnable": false,
-        "shortName": "h5p-editor-radio-group",
         "title": "Grupo radio"
     },
     "Shepherd": {
@@ -345,7 +317,6 @@
         },
         "repoName": "shepherd",
         "runnable": false,
-        "shortName": "shepherd",
         "title": "Ovejero"
     },
     "SimpleMultiChoice": {
@@ -357,7 +328,6 @@
         },
         "repoName": "h5p-simple-multiple-choice",
         "runnable": false,
-        "shortName": "h5p-simple-multiple-choice",
         "title": "Opción múltiple simple"
     },
     "SingleChoiceSet": {
@@ -369,7 +339,6 @@
         },
         "repoName": "h5p-single-choice-set",
         "runnable": true,
-        "shortName": "h5p-single-choice-set",
         "title": "Conjunto de elección única"
     },
     "Summary": {
@@ -381,7 +350,6 @@
         },
         "repoName": "h5p-summary",
         "runnable": true,
-        "shortName": "h5p-summary",
         "title": "Resumen"
     },
     "SummaryTextualEditor": {
@@ -393,7 +361,6 @@
         },
         "repoName": "h5p-editor-summary-textual-editor",
         "runnable": false,
-        "shortName": "h5p-editor-summary-textual-editor",
         "title": "Editor textual resumido"
     },
     "Table": {
@@ -405,7 +372,6 @@
         },
         "repoName": "h5p-table",
         "runnable": false,
-        "shortName": "h5p-table",
         "title": "Tabla"
     },
     "Tether": {
@@ -417,7 +383,6 @@
         },
         "repoName": "tether",
         "runnable": false,
-        "shortName": "tether",
         "title": "Sujeción"
     },
     "Text": {
@@ -429,7 +394,6 @@
         },
         "repoName": "h5p-text",
         "runnable": false,
-        "shortName": "h5p-text",
         "title": "Texto"
     },
     "Timecode": {
@@ -441,7 +405,6 @@
         },
         "repoName": "h5p-editor-timecode",
         "runnable": false,
-        "shortName": "h5p-editor-timecode",
         "title": "Editor de temporizadores"
     },
     "Transition": {
@@ -453,7 +416,6 @@
         },
         "repoName": "h5p-transition",
         "runnable": false,
-        "shortName": "h5p-transition",
         "title": "Transición"
     },
     "TrueFalse": {
@@ -465,7 +427,6 @@
         },
         "repoName": "h5p-true-false",
         "runnable": true,
-        "shortName": "h5p-true-false",
         "title": "Pregunta de verdadero/falso"
     },
     "UrlField": {
@@ -477,7 +438,6 @@
         },
         "repoName": "h5p-editor-url-field",
         "runnable": false,
-        "shortName": "h5p-editor-url-field",
         "title": "Url"
     },
     "VerticalTabs": {
@@ -489,7 +449,6 @@
         },
         "repoName": "h5p-editor-vertical-tabs",
         "runnable": false,
-        "shortName": "h5p-editor-vertical-tabs",
         "title": "Tablas verticales"
     },
     "Video": {
@@ -501,7 +460,6 @@
         },
         "repoName": "h5p-video",
         "runnable": false,
-        "shortName": "h5p-video",
         "title": "Video"
     },
     "Wizard": {
@@ -513,7 +471,6 @@
         },
         "repoName": "h5p-editor-wizard",
         "runnable": false,
-        "shortName": "h5p-editor-wizard",
         "title": "Asistente"
     }
 }

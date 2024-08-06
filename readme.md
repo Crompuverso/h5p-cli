@@ -1,20 +1,20 @@
-An h5p toolkit for running, editing and developing h5p content types.  
+Un conjunto de herramientas basadas en h5p, enfocadas en la creación de videos interactivos
 
-Make sure you have [git](https://git-scm.com/downloads), [NodeJS](https://nodejs.org/en/download/current) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (usually included in NodeJS) installed.  
-Some of the commands listed here are Linux & MacOS specific. On Windows it’s recommended that you run them inside [git bash](https://git-scm.com/download/win).  
+Para usar, asegúrate de antes tener [git](https://git-scm.com/downloads), [NodeJS](https://nodejs.org/en) and **npm** (usualmente incluido en NodeJS) instalados.  
+SAlgunos de los comandos listados aquí funcionan mejor en Linux y MacOS. En Windows se recomienda ejecutarlos dentro de [git bash](https://git-scm.com/download/win) o **powershell**. 
 
-# INSTALLATION
+# INSTALACIÓN
 
-Uninstall any previous h5p-cli toolkit instance.
+Desinstale cualquier instancia anterior del kit de herramientas h5p-cli.
 ```
 npm uninstall -g h5p-cli
 npm uninstall -g h5p
 ```
-Install it via npm
+Instálelo mediante npm 
 ```
 npm install -g h5p-cli
 ```
-or install it from its repository.
+o instálelo desde su repositorio.
 ```
 git clone https://github.com/Crompuverso/h5p-cli.git
 cd h5p-cli
@@ -22,45 +22,41 @@ npm install
 cd ..
 npm install -g ./h5p-cli
 ```
-You can now use `h5p` as a global command.  
+Ahora puede utilizar `h5p` como comando global.  
 
-![installation gif](assets/docs/install.gif)
-
-# QUICK START GUIDE
+# GUÍA DE INICIO RÁPIDO
 
 > [!IMPORTANT]
-> H5P commands run relative to the current working directory.  
-> You can create multiple work directories each with different library setups.  
+> Los comandos se ejecutan en relación al directorio de trabajo actual.  
+> Puedes crear múltiples directorios de trabajo cada uno con diferentes configuraciones de librerías.  
 
-0. Create a new folder for your first H5P development environment and change your current work dir to it.  
+0. Crea una nueva carpeta para tu primer entorno de desarrollo H5P y cambia a ella tu directorio de trabajo actual.  
 ```
-mkdir my_first_h5p_environment
-cd my_first_h5p_environment
+mkdir mi_primer_entorno
+cd mi_primer_entorno
 ```
 
-1. Install the core H5P libraries.
+1. Instale las bibliotecas básicas de H5P.
 ```
 h5p core
 ```
 
-2. Setup an H5P library such as h5p-course-presentation.
+2. Instale una biblioteca H5P como h5p-interactive-video.
 ```
-h5p setup h5p-course-presentation
+h5p setup h5p-interactive-video
 ```
-This is required for running and editing content types in the "h5p-course-presentation" library.  
-You can install other libraries listed by `h5p list` in the same way.  
-For example, `h5p setup h5p-accordion` installs the "h5p-accordion" library and its dependencies.  
+Esto es necesario para ejecutar y editar tipos de contenido en la biblioteca "h5p-interactive-video".  
+Puedes instalar otras librerías listadas por `h5p list` de la misma manera.  
+Por ejemplo, `h5p setup h5p-video` instala la librería "h5p-video" y sus dependencias. 
 > [!NOTE]
-> You can [read more on setting up libraries here](assets/docs/setup.md).
+> Puedes [leer más información sobre la creación de bibliotecas aquí](assets/docs/setup.md).
 
-3. Start the development server.
+3. Inicia el servidor de desarrollo.
 ```
 h5p server
 ```
-You can now use your browser to view, edit, delete, import, export and create new content types.  
+Ahora puede utilizar su navegador para ver, editar, eliminar, importar, exportar y crear nuevos tipos de contenido.  
 > [!IMPORTANT]
-> Remember that the folder where you run the H5P server is where the server will look for the libraries. If you run the setup commands in another folder then the server will not find those libraries.  
+> Recuerda que la carpeta donde ejecutas el servidor H5P es donde el servidor buscará las librerías. Si ejecuta los comandos de instalación en otra carpeta, el servidor no encontrará esas bibliotecas.  
 
-<video src="https://github.com/h5p/h5p-cli/assets/5208532/b33a12e6-3200-488c-81c6-eae41b13f512"></video>
-
-You can [find more commands in an overview](assets/docs/commands.md) or by running `h5p help`.  
+Puedes [encontrar más información de los comandos aquí](assets/docs/commands.md) o ejecutando `h5p help`. 

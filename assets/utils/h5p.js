@@ -1,14 +1,14 @@
 /**
- * Requirements
+ * Requerimientos
  */
-var https = require('https');
+var archiver = require('archiver');
 var child = require('child_process');
 var fs = require('fs');
-var archiver = require('archiver');
-var outputWriter = require('./utility/output');
 const h5pIgnoreParser = require('./utility/h5p-ignore-parser');
-const repository = require('./utility/repository');
 const languageCodes = require('./utility/language-codes');
+var outputWriter = require('./utility/output');
+const path = require('path');
+const repository = require('./utility/repository');
 
 /**
  * No options specified.
@@ -99,37 +99,30 @@ function skipWarnings(output) {
 }
 
 /**
- * Run given callback with h5p registry as params.
+ * Función que ejecuta una llamada de retorno con el registro h5p como parámetro.
+ * @param {*} next 
+ * @returns 
  */
 function getRegistry(next) {
   if (registry) return next(null, registry.libraries);
 
-  https.get('https://h5p.org/registry.json', function (response) {
-    if (response.statusCode !== 200) {
-      return next('Server responded with HTTP ' + response.statusCode + '.');
+  const localRegistryPath = path.join(__dirname, 'librerías.json');
+
+  fs.readFile(localRegistryPath, 'utf8', (err, data) => {
+    if (err) {
+      return next(`Error al leer archivo local: ${err.message}`);
     }
 
-    var jsonBuffer = '';
-    response.on('data', function (chunk) {
-      jsonBuffer += chunk;
-    });
+    try {
+      registry = JSON.parse(data);
+    } catch (error) {
+      return next(`No es posible parsear la información de registro: ${error.message}`);
+    }
 
-    response.on('end', function () {
-      try {
-        registry = JSON.parse(jsonBuffer);
-      }
-      catch (error) {
-        return next('Cannot parse registry information: ' + error.message);
-      }
-
-      if (registry.apiVersion !== apiVersion) return next('API Version mismatch.\nMake sure this tool is up to date.');
-
-      next(null, registry.libraries);
-    });
-  }).on('error', function (error) {
-    return next('Cannot connect to server: ' + error.message);
+    next(null, registry.libraries);
   });
 }
+
 
 /**
  * Recursive function that adds the given library + its dependencies to the collection.

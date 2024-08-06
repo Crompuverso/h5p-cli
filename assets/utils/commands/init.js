@@ -11,7 +11,7 @@ const libraryJson = {
   "runnable": 1,
   "author": "",
   "license": "MIT",
-  "machineName": "H5P.ChangeMe",
+  "machineName": "ChangeMe",
   "preloadedJs": [
     {"path": "index.js"}
   ]
@@ -34,14 +34,14 @@ README.md`;
 const createLibraryJson = function(answers) {
   let extendedLibrary =
     Object.assign({}, libraryJson, {
-      title: answers.title,
-      description: answers.description,
       author: answers.author,
+      description: answers.description,
       license: answers.license,
-      machineName: "H5P." + answers.name,
+      machineName: answers.name,
       preloadedJs: [
         { path: answers.entryPoint }
-      ]
+      ],
+      title: answers.title
     });
 
   fs.writeFileSync(

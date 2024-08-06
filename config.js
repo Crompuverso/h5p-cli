@@ -15,7 +15,7 @@ module.exports = {
     }
   },
   urls: {
-    registry: 'https://raw.githubusercontent.com/h5p/h5p-registry/main/libraries.json',
+    registry: 'https://raw.githubusercontent.com/Crompuverso/h5p-cli/desarrollo/registro-librer%C3%ADas.json',
     library: {
       language: 'https://raw.githubusercontent.com/{org}/{dep}/{version}/language/en.json',
       semantics: 'https://raw.githubusercontent.com/{org}/{dep}/{version}/semantics.json',
@@ -29,7 +29,7 @@ module.exports = {
     clone: ['h5p-editor-php-library', 'h5p-php-library'],
     setup: ['h5p-math-display']
   },
-  registry: 'libraryRegistry.json'
+  registry: 'registro-librerías.json'
 }
 if (process.argv[3] && process.argv[2] === 'server') {
   module.exports.port = +process.argv[3];

@@ -25,6 +25,41 @@ const handleMissingOptionals = (missingOptionals, result, item) => {
   }
 }
 const cli = {
+  // Sección de ayuda
+  help: (command) => {
+    try {
+      const help = fs.readFileSync(`${require.main.path}/assets/docs/ayuda.md`, 'utf-8');
+      if (command) {
+        const regexp = ` \`h5p ${command}(.*?)(\\n\\n|\\Z)`;
+        const data = help.match(new RegExp(regexp, 's'))?.[0];
+        if (!data) {
+          console.log(`> "${command}" is not a valid command`);
+          return;
+        }
+        console.log(marked(data));
+        return;
+      }
+      console.log(marked(help));
+    }
+    catch (error) {
+      console.log('> error');
+      console.log(error);
+    }
+  },
+  // lista las librerías
+  list: async (ignoreFile) => {
+    try {
+      console.log('» Obteniendo registro de librerías');
+      const result = await logic.getRegistry(parseInt(ignoreFile));
+      for (let item in result.regular) {
+        console.log(`${result.regular[item].id} : ${result.regular[item].title}`);
+      }
+    }
+    catch (error) {
+      console.log('> error');
+      console.log(error);
+    }
+  },
   // exports content type as .h5p zipped file
   export: async (library, folder) => {
     try {
@@ -41,20 +76,6 @@ const cli = {
     try {
       const output = logic.import(folder, archive);
       console.log(`content/${output}`);
-    }
-    catch (error) {
-      console.log('> error');
-      console.log(error);
-    }
-  },
-  // lists h5p libraries
-  list: async (reversed, ignoreFile) => {
-    try {
-      console.log('> fetching h5p library registry');
-      const result = await logic.getRegistry(parseInt(ignoreFile));
-      for (let item in result.regular) {
-        console.log(`${parseInt(reversed) ? result.regular[item].id : item} (${result.regular[item].org})`);
-      }
     }
     catch (error) {
       console.log('> error');
@@ -174,14 +195,14 @@ const cli = {
     }
   },
   // computes & installs dependencies for h5p library
-  setup: async function(library, version, download) {
+  setup: async function (library, version, download) {
     const isUrl = ['http', 'git@'].includes(library.slice(0, 4)) ? true : false;
     const url = library;
     const missingOptionals = {};
     try {
       if (isUrl) {
         const entry = await this.register(url);
-        library = logic.machineToShort(Object.keys(entry)[0]);
+        library = lObject.keys(entry)[0];
       }
       let toSkip = [];
       const action = parseInt(download) ? 'download' : 'clone';
@@ -220,23 +241,6 @@ const cli = {
       console.log(error);
     }
   },
-  // updates local library registry entry
-  register: async (input) => {
-    try {
-      const isUrl = ['http', 'git@'].includes(input.slice(0, 4)) ? true : false;
-      let registry = await logic.getRegistry();
-      const entry = isUrl ? await logic.registryEntryFromRepoUrl(input) : JSON.parse(fs.readFileSync(input, 'utf-8'));
-      registry.reversed = {...registry.reversed, ...entry};
-      fs.writeFileSync(config.registry, JSON.stringify(registry.reversed));
-      console.log('> updated registry entry');
-      console.log(entry);
-      return entry;
-    }
-    catch (error) {
-      console.log('> error');
-      console.log(error);
-    }
-  },
   // generates report that verifies if an h5p library and its dependencies have been correctly computed & installed
   verify: async (library) => {
     try {
@@ -252,29 +256,8 @@ const cli = {
   server: () => {
     require('./server.js');
   },
-  // help section
-  help: (command) => {
-    try {
-      const help = fs.readFileSync(`${require.main.path}/assets/docs/commands.md`, 'utf-8');
-      if (command) {
-        const regexp = ` \`h5p ${command}(.*?)(\\n\\n|\\Z)`;
-        const data = help.match(new RegExp(regexp, 's'))?.[0];
-        if (!data) {
-          console.log(`> "${command}" is not a valid command`);
-          return;
-        }
-        console.log(marked(data));
-        return;
-      }
-      console.log(marked(help));
-    }
-    catch (error) {
-      console.log('> error');
-      console.log(error);
-    }
-  },
   // various utility commands
-  utils: function() {
+  utils: function () {
     if (typeof utils[arguments[0]] != 'function') {
       console.log(`> "${process.argv[3]}" is not a valid utils command`);
       return;

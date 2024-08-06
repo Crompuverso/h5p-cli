@@ -7,7 +7,7 @@
   "runnable": 1,
   "author": "Amendor AS",
   "license": "cc-by-sa",
-  "machineName": "H5P.GreetingCard",
+  "machineName": "GreetingCard",
   "coreApi": {
     "majorVersion": 1,
     "minorVersion": 19

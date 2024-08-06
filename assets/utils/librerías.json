@@ -1,0 +1,481 @@
+{
+    "libraries": {
+        "font-awesome": {
+            "machineName": "FontAwesome",
+            "repository": "git@github.com:Crompuverso/font-awesome.git",
+            "version": {
+                "major": "4",
+                "minor": "5"
+            }
+        },
+        "h5p-advanced-text": {
+            "machineName": "AdvancedText",
+            "repository": "git@github.com:Crompuverso/h5p-advanced-text.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-audio": {
+            "dependencies": [
+                "font-awesome"
+            ],
+            "machineName": "Audio",
+            "repository": "git@github.com:Crompuverso/h5p-audio.git",
+            "version": {
+                "major": "1",
+                "minor": "5"
+            }
+        },
+        "h5p-blanks": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-joubel-ui",
+                "h5p-question"
+            ],
+            "machineName": "Blanks",
+            "repository": "git@github.com:Crompuverso/h5p-blanks.git",
+            "version": {
+                "major": "1",
+                "minor": "14"
+            }
+        },
+        "h5p-drag-n-bar": {
+            "dependencies": [
+                "h5p-drag-n-drop",
+                "h5p-drag-n-resize",
+                "h5p-font-icons"
+            ],
+            "machineName": "DragNBar",
+            "repository": "git@github.com:Crompuverso/h5p-drag-n-bar.git",
+            "version": {
+                "major": "1",
+                "minor": "5"
+            }
+        },
+        "h5p-drag-n-drop": {
+            "machineName": "DragNDrop",
+            "repository": "git@github.com:Crompuverso/h5p-drag-n-drop.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-drag-n-resize": {
+            "machineName": "DragNResize",
+            "repository": "git@github.com:Crompuverso/h5p-drag-n-resize.git",
+            "version": {
+                "major": "1",
+                "minor": "2"
+            }
+        },
+        "h5p-drag-question": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-editor-drag-question",
+                "h5p-joubel-ui",
+                "h5p-question",
+                "jquery-ui"
+            ],
+            "machineName": "DragQuestion",
+            "repository": "git@github.com:Crompuverso/h5p-drag-question.git",
+            "version": {
+                "major": "1",
+                "minor": "14"
+            }
+        },
+        "h5p-drag-text": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-joubel-ui",
+                "h5p-question",
+                "jquery-ui"
+            ],
+            "machineName": "DragText",
+            "repository": "git@github.com:Crompuverso/h5p-drag-text.git",
+            "version": {
+                "major": "1",
+                "minor": "10"
+            }
+        },
+        "h5p-editor-color-selector": {
+            "machineName": "ColorSelector",
+            "repository": "git@github.com:Crompuverso/h5p-editor-color-selector.git",
+            "version": {
+                "major": "1",
+                "minor": "3"
+            }
+        },
+        "h5p-editor-drag-question": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-advanced-text",
+                "h5p-drag-n-bar",
+                "h5p-editor-wizard",
+                "h5p-image",
+                "h5p-joubel-ui",
+                "jquery-ui"
+            ],
+            "machineName": "DragQuestionEditor",
+            "repository": "git@github.com:Crompuverso/h5p-editor-drag-question.git",
+            "version": {
+                "major": "1",
+                "minor": "10"
+            }
+        },
+        "h5p-editor-duration": {
+            "machineName": "Duration",
+            "repository": "git@github.com:Crompuverso/h5p-editor-duration.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-editor-interactive-video": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-audio",
+                "h5p-blanks",
+                "h5p-drag-n-bar",
+                "h5p-drag-question",
+                "h5p-drag-text",
+                "h5p-editor-color-selector",
+                "h5p-editor-duration",
+                "h5p-editor-timecode",
+                "h5p-font-icons",
+                "h5p-go-to-question",
+                "h5p-guided-tour",
+                "h5p-image",
+                "h5p-link",
+                "h5p-mark-the-words",
+                "h5p-multi-choice",
+                "h5p-nil",
+                "h5p-questionnaire",
+                "h5p-single-choice-set",
+                "h5p-summary",
+                "h5p-table",
+                "h5p-text",
+                "h5p-true-false"
+            ],
+            "machineName": "InteractiveVideoEditor",
+            "repository": "git@github.com:Crompuvewrso/h5p-editor-interactive-video.git",
+            "version": {
+                "major": "1",
+                "minor": "25"
+            }
+        },
+        "h5p-editor-radio-group": {
+            "machineName": "RadioGroup",
+            "repository": "git@github.com:Crompuverso/h5p-editor-radio-group.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-editor-summary-textual-editor": {
+            "machineName": "SummaryTextualEditor",
+            "repository": "git@github.com:Crompuverso/h5p-editor-summary-textual-editor.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-editor-timecode": {
+            "machineName": "Timecode",
+            "repository": "git@github.com:Crompuverso/h5p-editor-timecode.git",
+            "version": {
+                "major": "1",
+                "minor": "2"
+            }
+        },
+        "h5p-editor-url-field": {
+            "machineName": "UrlField",
+            "repository": "git@github.com:Crompuverso/h5p-editor-url-field.git",
+            "version": {
+                "major": "1",
+                "minor": "2"
+            }
+        },
+        "h5p-editor-vertical-tabs": {
+            "dependencies": [
+                "font-awesome"
+            ],
+            "machineName": "VerticalTabs",
+            "repository": "git@github.com:Crompuverso/h5p-editor-vertical-tabs.git",
+            "version": {
+                "major": "1",
+                "minor": "3"
+            }
+        },
+        "h5p-editor-wizard": {
+            "dependencies": [
+                "h5p-font-icons"
+            ],
+            "machineName": "Wizard",
+            "repository": "git@github.com:Crompuverso/h5p-editor-wizard.git",
+            "version": {
+                "major": "1",
+                "minor": "2"
+            }
+        },
+        "h5p-font-icons": {
+            "machineName": "FontIcons",
+            "repository": "git@github.com:h5Crompuversop/h5p-font-icons.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        },
+        "h5p-go-to-question": {
+            "dependencies": [
+                "h5p-editor-timecode",
+                "h5p-joubel-ui"
+            ],
+            "machineName": "GoToQuestion",
+            "repository": "git@github.com:Crompuverso/h5p-go-to-question.git",
+            "version": {
+                "major": "1",
+                "minor": "3"
+            }
+        },
+        "h5p-guided-tour": {
+            "dependencies": [
+                "shepherd"
+            ],
+            "machineName": "GuidedTour",
+            "repository": "git@github.com:Crompuverso/h5p-guided-tour.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        },
+        "h5p-image": {
+            "machineName": "Image",
+            "repository": "git@github.com:Crompuverso/h5p-image.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-interactive-video": {
+            "version": {
+                "major": "1",
+                "minor": "26"
+            },
+            "machineName": "InteractiveVideo",
+            "repository": "git@github.com:Crompuverso/h5p-interactive-video.git",
+            "dependencies": [
+                "font-awesome",
+                "h5p-drag-n-bar",
+                "h5p-editor-interactive-video",
+                "h5p-editor-wizard",
+                "h5p-interactive-video",
+                "h5p-video",
+                "jquery-ui"
+            ]
+        },
+        "h5p-joubel-ui": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-font-icons",
+                "h5p-transition"
+            ],
+            "machineName": "JoubelUI",
+            "repository": "git@github.com:Crompuverso/h5p-joubel-ui.git",
+            "version": {
+                "major": "1",
+                "minor": "3"
+            }
+        },
+        "h5p-link": {
+            "dependencies": [
+                "h5p-editor-url-field"
+            ],
+            "machineName": "Link",
+            "repository": "git@github.com:Crompuverso/h5p-link.git",
+            "version": {
+                "major": "1",
+                "minor": "3"
+            }
+        },
+        "h5p-mark-the-words": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-joubel-ui",
+                "h5p-question"
+            ],
+            "machineName": "MarkTheWords",
+            "repository": "git@github.com:Crompuverso/h5p-mark-the-words.git",
+            "version": {
+                "major": "1",
+                "minor": "11"
+            }
+        },
+        "h5p-multi-choice": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-joubel-ui",
+                "h5p-question"
+            ],
+            "machineName": "MultiChoice",
+            "repository": "git@github.com:Crompuverso/h5p-multi-choice.git",
+            "version": {
+                "major": "1",
+                "minor": "16"
+            }
+        },
+        "h5p-nil": {
+            "machineName": "Nil",
+            "repository": "git@github.com:Crompuverso/h5p-nil.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        },
+        "h5p-open-ended-question": {
+            "machineName": "OpenEndedQuestion",
+            "repository": "git@github.com:Crompuverso/h5p-open-ended-question.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        },
+        "h5p-question": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-joubel-ui"
+            ],
+            "machineName": "Question",
+            "repository": "git@github.com:Crompuverso/h5p-question.git",
+            "version": {
+                "major": "1",
+                "minor": "5"
+            }
+        },
+        "h5p-questionnaire": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-editor-vertical-tabs",
+                "h5p-open-ended-question",
+                "h5p-simple-multiple-choice"
+            ],
+            "machineName": "Questionnaire",
+            "repository": "git@github.com:Crompuverso/h5p-questionnaire.git",
+            "version": {
+                "major": "1",
+                "minor": "3"
+            }
+        },
+        "h5p-simple-multiple-choice": {
+            "machineName": "SimpleMultiChoice",
+            "repository": "git@github.com:Crompuverso/h5p-simple-multiple-choice.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-single-choice-set": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-editor-vertical-tabs",
+                "h5p-joubel-ui",
+                "h5p-question",
+                "h5p-transition"
+            ],
+            "machineName": "SingleChoiceSet",
+            "repository": "git@github.com:Crompuverso/h5p-single-choice-set.git",
+            "version": {
+                "major": "1",
+                "minor": "11"
+            }
+        },
+        "h5p-summary": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-editor-summary-textual-editor",
+                "h5p-joubel-ui",
+                "h5p-question"
+            ],
+            "machineName": "Summary",
+            "repository": "git@github.com:Crompuverso/h5p-summary.git",
+            "version": {
+                "major": "1",
+                "minor": "10"
+            }
+        },
+        "h5p-table": {
+            "machineName": "Table",
+            "repository": "git@github.com:Crompuverso/h5p-table.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-text": {
+            "machineName": "Text",
+            "repository": "git@github.com:Crompuverso/h5p-text.git",
+            "version": {
+                "major": "1",
+                "minor": "1"
+            }
+        },
+        "h5p-transition": {
+            "machineName": "Transition",
+            "repository": "git@github.com:Crompuverso/h5p-transition.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        },
+        "h5p-true-false": {
+            "dependencies": [
+                "font-awesome",
+                "h5p-editor-radio-group",
+                "h5p-font-icons",
+                "h5p-joubel-ui",
+                "h5p-question"
+            ],
+            "machineName": "TrueFalse",
+            "repository": "git@github.com:Crompuverso/h5p-true-false.git",
+            "version": {
+                "major": "1",
+                "minor": "8"
+            }
+        },
+        "h5p-video": {
+            "machineName": "Video",
+            "repository": "git@github.com:Crompuverso/h5p-video.git",
+            "version": {
+                "major": "1",
+                "minor": "6"
+            }
+        },
+        "jquery-ui": {
+            "machineName": "jQuery.ui",
+            "repository": "git@github.com:Crompuverso/jquery-ui.git",
+            "version": {
+                "major": "1",
+                "minor": "10"
+            }
+        },
+        "shepherd": {
+            "dependencies": [
+                "tether"
+            ],
+            "machineName": "Shepherd",
+            "repository": "git@github.com:Crompuverso/shepherd.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        },
+        "tether": {
+            "machineName": "Tether",
+            "repository": "git@github.com:Crompuverso/tether.git",
+            "version": {
+                "major": "1",
+                "minor": "0"
+            }
+        }
+    }
+}

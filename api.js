@@ -247,7 +247,7 @@ module.exports = {
       output.total = list.length;
       for (let i = start; i < Math.min(end, list.length); i++) {
         let entry = registry.reversed?.[list[i].id];
-        const library = entry.shortName;
+        const library = entry.repoName;
         entry = (await logic.computeDependencies(library, 'view', null, libraryDirs[registry.regular[library].id]))[library];
         let icon = '/assets/icon.svg';
         if (entry.version) {
@@ -377,7 +377,7 @@ module.exports = {
       const libs = await logic.computeDependencies(library, 'view', null, libFolder);
       const translations = {};
       for (let item of request.body.libraries) {
-        const entry = libs[registry.reversed[item.split(' ')[0]].shortName];
+        const entry = libs[registry.reversed[item.split(' ')[0]].repoName];
         const folder = libraryDirs[entry.id];
         const idx = `${entry.id} ${entry.version.major}.${entry.version.minor}`;
         const languageFolder = `${config.folders.libraries}/${folder}/language`;
@@ -696,12 +696,12 @@ const ajaxLibraries = async (options) => {
       if (!registry.reversed[item] || !libraryDirs[item]) {
         continue;
       }
-      libraries.push(registry.reversed[item].shortName);
+      libraries.push(registry.reversed[item].repoName);
     }
   }
   if (options.machineName) {
     libraries = [];
-    libraries.push(registry.reversed[options.machineName].shortName);
+    libraries.push(registry.reversed[options.machineName].repoName);
   }
   const toDo = [];
   for (let item of libraries) {

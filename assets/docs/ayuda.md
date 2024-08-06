@@ -1,17 +1,16 @@
-• `h5p help` prints this help page.  
-`h5p help <command>` prints the help entry for that `<command>`.  
+• `h5p help` muestra esta pantalla de ayuda.
+`h5p help <comando>` muesta la ayuda correspondiente para el `<comando>`.
+
+• `h5p list [obtenerRegistro]` lista las librerías disponibles.
+Usa `1` para `[obtenerRegistro]`, para recrear el registro local.
+El formato de salida es `<librería> : <título>`.
 
 • `h5p utils help` prints a list of utility commands.  
 Each utility command can then be run via `h5p utils <cmd> [<args>...]`.  
 Run `h5p utils help <cmd>` for a detailed help entry for each utility `<cmd>`.  
 
 • `h5p core` installs the core H5P libraries.  
-These are required to view and edit H5P content types.  
-
-• `h5p list [machineName] [pullRegistry]` lists the current H5P libraries.  
-Use `1` for `[machineName]` to list the machine name instead of the default repo name.  
-Use `1` for `[pullRegistry]` to recreate the local registry.  
-The output format is `<library> (<org>)`.  
+These are required to view and edit H5P content types.
 
 • `h5p tags <org> <library> <mainBranch>` lists current library versions.  
 The `<org>` for a library is mentioned in the `list` command output.  
@@ -21,28 +20,6 @@ The `<org>` for a library is mentioned in the `list` command output.
 Use `view` or `edit` for `<mode>` to generate dependencies for those cases.  
 Specify a `[version]` to compute deps for that version. Default is `master`. Use the `tags` command to list versions for a library.  
 Specify a `[folder]` to compute deps based on the library from `libraries/[folder]` folder. Default is `""`.  
-
-• `h5p register <gitUrl>` or `h5p register <entry.json>` to add or update entries in the local registry.  
-`<gitUrl>` is something like `git@github.com:Crompuverso/h5p-accordion.git` or `https://github.com/Crompuverso/h5p-accordion`.  
-If specified, the `<entry.json>` file needs to be created. Below is an example.  
-You can use this command to update existing registry entries.
-```
-{
-  "H5P.Accordion": {
-    "id": "H5P.Accordion", // library machine name
-    "title": "Accordion",
-    "repo": { // optional
-      "type": "github",
-      "url": "https://github.com/Crompuverso/h5p-accordion"
-    },
-    "author": "Batman",
-    "runnable": true, // specify true if this is a main library from which you can create content types; false if it's a dependency for another
-    "shortName": "h5p-accordion", // library name
-    "repoName": "h5p-accordion", // optional repository name
-    "org": "Crompuverso" // github organization under which the library is published; optional; required for clone, install and deps commands
-  }
-}
-```
 
 • `h5p clone <library> <mode>` clones the library and its dependencies in the libraries folder.  
 Use `view` or `edit` for `<mode>`.  
@@ -70,8 +47,7 @@ Running `h5p verify h5p-accordion` should return something like below if the lib
   registry: true, // library found in registry
   libraries: { // shows which dependencies are installed; optional dependencies are ignored but should be present for the library to be fully featured
     'FontAwesome-4.5': { optional: undefined, present: true },
-    'H5P.AdvancedText-1.1': { optional: undefined, present: true },
-    'H5P.Accordion-1.0': { optional: undefined, present: true }
+    'AdvancedText-1.1': { optional: undefined, present: true },
   },
   ok: true // overall setup status
 }

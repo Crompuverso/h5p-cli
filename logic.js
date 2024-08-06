@@ -105,6 +105,43 @@ const getFileList = (folder) => {
   return output;
 }
 module.exports = {
+  /**
+   * Recupera la lista de librerías
+   * @param {*} ignoreFile //En caso positivo se sobreescribe con los datos en línea
+   * @returns 
+   */
+  getRegistry: async (ignoreFile) => {
+    let list;
+    if (!ignoreFile && fs.existsSync(config.registry)) {
+      list = JSON.parse(fs.readFileSync(config.registry, 'utf-8'));
+    }
+    else {
+      list = await getFile(config.urls.registry, true);
+    }
+    const output = {
+      regular: {},
+      reversed: {}
+    }
+    for (let item in list) {
+      if (list[item].repo) {
+        if (!list[item].repoName) {
+          list[item].repoName = list[item].repo.url.split('/').slice(-1)[0];
+        }
+        if (!list[item].org) {
+          list[item].org = list[item].repo.url.split('/').slice(3, 4)[0];
+        }
+      }
+      delete list[item].resume;
+      delete list[item].fullscreen;
+      delete list[item].xapiVerbs;
+      output.reversed[list[item].id] = list[item];
+      output.regular[list[item].repoName] = list[item];
+    }
+    if (ignoreFile) {
+      fs.writeFileSync(config.registry, JSON.stringify(list));
+    }
+    return output;
+  },
   // debug console log
   log: function (message) {
     if (process.argv[2] === 'server') {
@@ -164,43 +201,6 @@ module.exports = {
     fs.rmSync(target, { recursive: true, force: true });
     return zipped;
   },
-  /* retrieves list of h5p librarie
-  ignoreFile - if true file is overwritten with online data */
-  getRegistry: async (ignoreFile) => {
-    let list;
-    if (!ignoreFile && fs.existsSync(config.registry)) {
-      list = JSON.parse(fs.readFileSync(config.registry, 'utf-8'));
-    }
-    else {
-      list = await getFile(config.urls.registry, true);
-    }
-    const output = {
-      regular: {},
-      reversed: {}
-    }
-    for (let item in list) {
-      if (list[item].repo) {
-        if (!list[item].repoName) {
-          list[item].repoName = list[item].repo.url.split('/').slice(-1)[0];
-        }
-        if (!list[item].org) {
-          list[item].org = list[item].repo.url.split('/').slice(3, 4)[0];
-        }
-      }
-      if (!list[item].shortName) {
-        list[item].shortName = list[item].repoName;
-      }
-      delete list[item].resume;
-      delete list[item].fullscreen;
-      delete list[item].xapiVerbs;
-      output.reversed[list[item].id] = list[item];
-      output.regular[list[item].shortName] = list[item];
-    }
-    if (ignoreFile) {
-      fs.writeFileSync(config.registry, JSON.stringify(list));
-    }
-    return output;
-  },
   /* computes list of library dependencies in their correct load order
   mode - 'view' or 'edit' to compute non-editor or editor dependencies
   version - optional version to compute; defaults to 'master'
@@ -250,7 +250,7 @@ module.exports = {
     // determine if dependency needs to be processed
     const handleDepListEntry = (machineName, parent, ver, dir) => {
       const lib = registry.reversed[machineName];
-      const entry = lib?.shortName;
+      const entry = lib?.repoName;
       if (!entry) {
         const optional = isOptional(cache[parent], machineName);
         if (!done[level][machineName] || done[level][machineName].optional) {
@@ -634,37 +634,11 @@ module.exports = {
           "id": id,
           "title": info.title,
           "author": info.author,
-          "runnable": info.runnable,
-          "shortName": module.exports.machineToShort(id)
+          "runnable": info.runnable
         }
         fs.writeFileSync(config.registry, JSON.stringify(registry.reversed));
         console.log(`> registered local library ${id}`);
       }
-    }
-    return output;
-  },
-  machineToShort: (machineName) => {
-    machineName = machineName.replace('H5PEditor', 'H5P-Editor');
-    return machineName.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace('.', '-');
-  },
-  registryEntryFromRepoUrl: function(gitUrl) {
-    let { host, org, repoName } = parseGitUrl(gitUrl);
-    const list = getRepoFile(gitUrl, 'library.json', 'master', true);
-    const shortName = module.exports.machineToShort(list.machineName);
-    const type = host.split('.')[0];
-    const output = {};
-    output[list.machineName] = {
-      id: list.machineName,
-      title: list.title,
-      repo: {
-        type: type,
-        url: `https://${host}/${org}/${repoName}`
-      },
-      author: list.author,
-      runnable: list.runnable,
-      shortName,
-      repoName,
-      org
     }
     return output;
   },
