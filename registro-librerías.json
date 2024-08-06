@@ -1,0 +1,519 @@
+{
+    "FontAwesome": {
+        "author": "Crompuverso",
+        "id": "FontAwesome",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/font-awesome"
+        },
+        "repoName": "font-awesome",
+        "runnable": false,
+        "shortName": "font-awesome",
+        "title": "Font Awesome"
+    },
+    "AdvancedText": {
+        "author": "Crompuverso",
+        "id": "AdvancedText",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-advanced-text"
+        },
+        "repoName": "h5p-advanced-text",
+        "runnable": false,
+        "shortName": "h5p-advanced-text",
+        "title": "Texto"
+    },
+    "Audio": {
+        "author": "Crompuverso",
+        "id": "Audio",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-audio"
+        },
+        "repoName": "h5p-audio",
+        "runnable": true,
+        "shortName": "h5p-audio",
+        "title": "Audio"
+    },
+    "Blanks": {
+        "author": "Crompuverso",
+        "id": "Blanks",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-blanks"
+        },
+        "repoName": "h5p-blanks",
+        "runnable": true,
+        "shortName": "h5p-blanks",
+        "title": "Rellena los blancos"
+    },
+    "ColorSelector": {
+        "author": "Crompuverso",
+        "id": "ColorSelector",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-color-selector"
+        },
+        "repoName": "h5p-editor-color-selector",
+        "runnable": false,
+        "shortName": "h5p-editor-color-selector",
+        "title": "Selector de color"
+    },
+    "DragNBar": {
+        "author": "Crompuverso",
+        "id": "DragNBar",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-drag-n-bar"
+        },
+        "repoName": "h5p-drag-n-bar",
+        "runnable": false,
+        "shortName": "h5p-drag-n-bar",
+        "title": "Barra de arrastre"
+    },
+    "DragNDrop": {
+        "author": "Crompuverso",
+        "id": "DragNDrop",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-drag-n-drop"
+        },
+        "repoName": "h5p-drag-n-drop",
+        "runnable": false,
+        "shortName": "h5p-drag-n-drop",
+        "title": "Arrastrar y soltar"
+    },
+    "DragNResize": {
+        "author": "Crompuverso",
+        "id": "DragNResize",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-drag-n-resize"
+        },
+        "repoName": "h5p-drag-n-resize",
+        "runnable": false,
+        "shortName": "h5p-drag-n-resize",
+        "title": "Arrastrar y redimensionar"
+    },
+    "DragQuestion": {
+        "author": "Crompuverso",
+        "id": "DragQuestion",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-drag-question"
+        },
+        "repoName": "h5p-drag-question",
+        "runnable": true,
+        "shortName": "h5p-drag-question",
+        "title": "Arrastrar pregunta"
+    },
+    "DragQuestionEditor": {
+        "author": "Crompuverso",
+        "id": "DragQuestionEditor",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-drag-question"
+        },
+        "repoName": "h5p-editor-drag-question",
+        "runnable": false,
+        "shortName": "h5p-editor-drag-question",
+        "title": "Arrastrar editor de preguntas"
+    },
+    "DragText": {
+        "author": "Crompuverso",
+        "id": "DragText",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-drag-text"
+        },
+        "repoName": "h5p-drag-text",
+        "runnable": true,
+        "shortName": "h5p-drag-text",
+        "title": "Arrastrar texto"
+    },
+    "Duration": {
+        "author": "Crompuverso",
+        "id": "Duration",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-duration"
+        },
+        "repoName": "h5p-editor-duration",
+        "runnable": false,
+        "shortName": "h5p-editor-duration",
+        "title": "Duración"
+    },
+    "FontIcons": {
+        "author": "Crompuverso",
+        "id": "FontIcons",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-font-icons"
+        },
+        "repoName": "h5p-font-icons",
+        "runnable": false,
+        "shortName": "h5p-font-icons",
+        "title": "Íconos tipográficos"
+    },
+    "GoToQuestion": {
+        "author": "Crompuverso",
+        "id": "GoToQuestion",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-go-to-question"
+        },
+        "repoName": "h5p-go-to-question",
+        "runnable": false,
+        "shortName": "h5p-go-to-question",
+        "title": "Vínculos"
+    },
+    "GuidedTour": {
+        "author": "Crompuverso",
+        "id": "GuidedTour",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-guided-tour"
+        },
+        "repoName": "h5p-guided-tour",
+        "runnable": false,
+        "shortName": "h5p-guided-tour",
+        "title": "Visita guiada"
+    },
+    "Image": {
+        "author": "Crompuverso",
+        "id": "Image",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-image"
+        },
+        "repoName": "h5p-image",
+        "runnable": false,
+        "shortName": "h5p-image",
+        "title": "Imagen"
+    },
+    "InteractiveVideo": {
+        "author": "Crompuverso",
+        "id": "InteractiveVideo",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-interactive-video"
+        },
+        "repoName": "h5p-interactive-video",
+        "runnable": true,
+        "shortName": "h5p-interactive-video",
+        "title": "Video interactivo"
+    },
+    "InteractiveVideoEditor": {
+        "author": "Crompuverso",
+        "id": "InteractiveVideoEditor",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-interactive-video"
+        },
+        "repoName": "h5p-editor-interactive-video",
+        "runnable": false,
+        "shortName": "h5p-editor-interactive-video",
+        "title": "Editor de video interactivo"
+    },
+    "JoubelUI": {
+        "author": "Crompuverso",
+        "id": "JoubelUI",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-joubel-ui"
+        },
+        "repoName": "h5p-joubel-ui",
+        "runnable": false,
+        "shortName": "h5p-joubel-ui",
+        "title": "IU Joubel"
+    },
+    "jQuery.ui": {
+        "author": "Crompuverso",
+        "id": "jQuery.ui",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/jquery-ui"
+        },
+        "repoName": "jquery-ui",
+        "runnable": false,
+        "shortName": "jquery-ui",
+        "title": "IU"
+    },
+    "Link": {
+        "author": "Crompuverso",
+        "id": "Link",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-link"
+        },
+        "repoName": "h5p-link",
+        "runnable": false,
+        "shortName": "h5p-link",
+        "title": "Enlace"
+    },
+    "MarkTheWords": {
+        "author": "Crompuverso",
+        "id": "MarkTheWords",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-mark-the-words"
+        },
+        "repoName": "h5p-mark-the-words",
+        "runnable": true,
+        "shortName": "h5p-mark-the-words",
+        "title": "Marcar palabras"
+    },
+    "MultiChoice": {
+        "author": "Crompuverso",
+        "id": "MultiChoice",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-multi-choice"
+        },
+        "repoName": "h5p-multi-choice",
+        "runnable": true,
+        "shortName": "h5p-multi-choice",
+        "title": "Opción múltiple"
+    },
+    "Nil": {
+        "author": "Crompuverso",
+        "id": "Nil",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-nil"
+        },
+        "repoName": "h5p-nil",
+        "runnable": false,
+        "shortName": "h5p-nil",
+        "title": "Etiqueta"
+    },
+    "OpenEndedQuestion": {
+        "author": "Crompuverso",
+        "id": "OpenEndedQuestion",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-open-ended-question"
+        },
+        "repoName": "h5p-open-ended-question",
+        "runnable": false,
+        "shortName": "h5p-open-ended-question",
+        "title": "Pregunta de respuesta abierta"
+    },
+    "Question": {
+        "author": "Crompuverso",
+        "id": "Question",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-question"
+        },
+        "org": "h5p",
+        "repoName": "h5p-question",
+        "runnable": false,
+        "shortName": "h5p-question",
+        "title": "Pregunta"
+    },
+    "Questionnaire": {
+        "author": "Crompuverso",
+        "id": "Questionnaire",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-questionnaire"
+        },
+        "repoName": "h5p-questionnaire",
+        "runnable": true,
+        "shortName": "h5p-questionnaire",
+        "title": "Cuestionario"
+    },
+    "RadioGroup": {
+        "author": "Crompuverso",
+        "id": "RadioGroup",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-radio-group"
+        },
+        "repoName": "h5p-editor-radio-group",
+        "runnable": false,
+        "shortName": "h5p-editor-radio-group",
+        "title": "Grupo radio"
+    },
+    "Shepherd": {
+        "author": "Crompuverso",
+        "id": "Shepherd",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/shepherd"
+        },
+        "repoName": "shepherd",
+        "runnable": false,
+        "shortName": "shepherd",
+        "title": "Ovejero"
+    },
+    "SimpleMultiChoice": {
+        "author": "Crompuverso",
+        "id": "SimpleMultiChoice",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-simple-multiple-choice"
+        },
+        "repoName": "h5p-simple-multiple-choice",
+        "runnable": false,
+        "shortName": "h5p-simple-multiple-choice",
+        "title": "Opción múltiple simple"
+    },
+    "SingleChoiceSet": {
+        "author": "Crompuverso",
+        "id": "SingleChoiceSet",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-single-choice-set"
+        },
+        "repoName": "h5p-single-choice-set",
+        "runnable": true,
+        "shortName": "h5p-single-choice-set",
+        "title": "Conjunto de elección única"
+    },
+    "Summary": {
+        "author": "Crompuverso",
+        "id": "Summary",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-summary"
+        },
+        "repoName": "h5p-summary",
+        "runnable": true,
+        "shortName": "h5p-summary",
+        "title": "Resumen"
+    },
+    "SummaryTextualEditor": {
+        "author": "Crompuverso",
+        "id": "SummaryTextualEditor",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-summary-textual-editor"
+        },
+        "repoName": "h5p-editor-summary-textual-editor",
+        "runnable": false,
+        "shortName": "h5p-editor-summary-textual-editor",
+        "title": "Editor textual resumido"
+    },
+    "Table": {
+        "author": "Crompuverso",
+        "id": "Table",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-table"
+        },
+        "repoName": "h5p-table",
+        "runnable": false,
+        "shortName": "h5p-table",
+        "title": "Tabla"
+    },
+    "Tether": {
+        "author": "Crompuverso",
+        "id": "Tether",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/tether"
+        },
+        "repoName": "tether",
+        "runnable": false,
+        "shortName": "tether",
+        "title": "Sujeción"
+    },
+    "Text": {
+        "author": "Crompuverso",
+        "id": "Text",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-text"
+        },
+        "repoName": "h5p-text",
+        "runnable": false,
+        "shortName": "h5p-text",
+        "title": "Texto"
+    },
+    "Timecode": {
+        "author": "Crompuverso",
+        "id": "Timecode",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-timecode"
+        },
+        "repoName": "h5p-editor-timecode",
+        "runnable": false,
+        "shortName": "h5p-editor-timecode",
+        "title": "Editor de temporizadores"
+    },
+    "Transition": {
+        "author": "Crompuverso",
+        "id": "Transition",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-transition"
+        },
+        "repoName": "h5p-transition",
+        "runnable": false,
+        "shortName": "h5p-transition",
+        "title": "Transición"
+    },
+    "TrueFalse": {
+        "author": "Crompuverso",
+        "id": "TrueFalse",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-true-false"
+        },
+        "repoName": "h5p-true-false",
+        "runnable": true,
+        "shortName": "h5p-true-false",
+        "title": "Pregunta de verdadero/falso"
+    },
+    "UrlField": {
+        "author": "Crompuverso",
+        "id": "UrlField",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-url-field"
+        },
+        "repoName": "h5p-editor-url-field",
+        "runnable": false,
+        "shortName": "h5p-editor-url-field",
+        "title": "Url"
+    },
+    "VerticalTabs": {
+        "author": "Crompuverso",
+        "id": "VerticalTabs",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-vertical-tabs"
+        },
+        "repoName": "h5p-editor-vertical-tabs",
+        "runnable": false,
+        "shortName": "h5p-editor-vertical-tabs",
+        "title": "Tablas verticales"
+    },
+    "Video": {
+        "author": "Crompuverso",
+        "id": "Video",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-video"
+        },
+        "repoName": "h5p-video",
+        "runnable": false,
+        "shortName": "h5p-video",
+        "title": "Video"
+    },
+    "Wizard": {
+        "author": "Crompuverso",
+        "id": "Wizard",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-editor-wizard"
+        },
+        "repoName": "h5p-editor-wizard",
+        "runnable": false,
+        "shortName": "h5p-editor-wizard",
+        "title": "Asistente"
+    }
+}
