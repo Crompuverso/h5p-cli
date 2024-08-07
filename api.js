@@ -419,8 +419,6 @@ module.exports = {
       if (!await verifySetup(library, response)) {
         return;
       }
-      const metadataSemantics = fs.readFileSync(`${require.main.path}/${config.folders.assets}/metadataSemantics.json`, 'utf-8');
-      const copyrightSemantics = fs.readFileSync(`${require.main.path}/${config.folders.assets}/copyrightSemantics.json`, 'utf-8');
       const libs = await logic.computeDependencies(library, 'edit', null, libraryDirs[registry.regular[library].id]);
       const jsonContent = fs.readFileSync(`./content/${folder}/content.json`, 'utf8');
       let preloadedJs = [];
@@ -479,8 +477,6 @@ module.exports = {
         title: info.title,
         baseUrl,
         ajaxPath: `${baseUrl}/edit/${library}/${folder}/`,
-        copyrightSemantics,
-        metadataSemantics,
         library,
         folder,
         preloadedCss: preloadedCss.join(',\n'),

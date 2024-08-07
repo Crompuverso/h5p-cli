@@ -49,7 +49,7 @@ Esto es necesario para ejecutar y editar tipos de contenido en la biblioteca "h5
 Puedes instalar otras librerías listadas por `h5p list` de la misma manera.  
 Por ejemplo, `h5p setup h5p-video` instala la librería "h5p-video" y sus dependencias. 
 > [!NOTE]
-> Puedes [leer más información sobre la creación de bibliotecas aquí](assets/docs/setup.md).
+> Puedes [leer más información sobre la creación de bibliotecas aquí](assets/docs/instalación.md).
 
 3. Inicia el servidor de desarrollo.
 ```
@@ -59,4 +59,4 @@ Ahora puede utilizar su navegador para ver, editar, eliminar, importar, exportar
 > [!IMPORTANT]
 > Recuerda que la carpeta donde ejecutas el servidor H5P es donde el servidor buscará las librerías. Si ejecuta los comandos de instalación en otra carpeta, el servidor no encontrará esas bibliotecas.  
 
-Puedes [encontrar más información de los comandos aquí](assets/docs/commands.md) o ejecutando `h5p help`. 
+Puedes [encontrar más información de los comandos aquí](assets/docs/comandos.md) o ejecutando `h5p help`. 

@@ -25,10 +25,32 @@ const handleMissingOptionals = (missingOptionals, result, item) => {
   }
 }
 const cli = {
+  // instala las librerías principales.
+  core: async () => {
+    try {
+      for (let item of config.core.clone) {
+        const folder = `${config.folders.libraries}/${item}`;
+        if (fs.existsSync(folder)) {
+          console.log(`>> ~ omitiendo ${item}; ya existe.`);
+          continue;
+        }
+        console.log(`>> + instalando ${item}`);
+        logic.clone(item, 'desarrollo', item);
+      }
+      for (let item of config.core.setup) {
+        await cli.setup(item);
+      }
+      console.log('> terminada la configuración de las librerías principales');
+    }
+    catch (error) {
+      console.log('> error');
+      console.log(error);
+    }
+  },
   // Sección de ayuda
   help: (command) => {
     try {
-      const help = fs.readFileSync(`${require.main.path}/assets/docs/ayuda.md`, 'utf-8');
+      const help = fs.readFileSync(`${require.main.path}/assets/docs/comandos.md`, 'utf-8');
       if (command) {
         const regexp = ` \`h5p ${command}(.*?)(\\n\\n|\\Z)`;
         const data = help.match(new RegExp(regexp, 's'))?.[0];
@@ -166,28 +188,6 @@ const cli = {
       console.log(`> cloning ${library} library and dependencies into "${config.folders.libraries}" folder`);
       await logic.getWithDependencies('clone', library, mode);
       console.log(`> done installing ${library}`);
-    }
-    catch (error) {
-      console.log('> error');
-      console.log(error);
-    }
-  },
-  // installs core h5p libraries
-  core: async () => {
-    try {
-      for (let item of config.core.clone) {
-        const folder = `${config.folders.libraries}/${item}`;
-        if (fs.existsSync(folder)) {
-          console.log(`>> ~ skipping ${item}; it already exists.`);
-          continue;
-        }
-        console.log(`>> + installing ${item}`);
-        logic.clone('h5p', item, 'master', item);
-      }
-      for (let item of config.core.setup) {
-        await cli.setup(item);
-      }
-      console.log('> done setting up core libraries');
     }
     catch (error) {
       console.log('> error');

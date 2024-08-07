@@ -281,7 +281,6 @@
             "type": "github",
             "url": "https://github.com/Crompuverso/h5p-question"
         },
-        "org": "h5p",
         "repoName": "h5p-question",
         "runnable": false,
         "title": "Pregunta"

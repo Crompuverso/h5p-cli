@@ -105,6 +105,10 @@ const getFileList = (folder) => {
   return output;
 }
 module.exports = {
+  // clonar repositorio usando git
+  clone: (repo, branch, target) => {
+    return execSync(`git clone ${fromTemplate(config.urls.library.clone, {repo})} ${target} --branch ${branch}`, { cwd: config.folders.libraries }).toString();
+  },
   /**
    * Recupera la lista de librerías
    * @param {*} ignoreFile //En caso positivo se sobreescribe con los datos en línea
@@ -126,9 +130,6 @@ module.exports = {
       if (list[item].repo) {
         if (!list[item].repoName) {
           list[item].repoName = list[item].repo.url.split('/').slice(-1)[0];
-        }
-        if (!list[item].org) {
-          list[item].org = list[item].repo.url.split('/').slice(3, 4)[0];
         }
       }
       delete list[item].resume;
@@ -225,7 +226,7 @@ module.exports = {
         return cache[dep].optionals;
       }
       cache[dep].semantics = dir ? await getFile(`${config.folders.libraries}/${dir}/semantics.json`, true)
-        : getRepoFile(fromTemplate(config.urls.library.clone, { org, repo: repoName }), 'semantics.json', version, true);
+        : getRepoFile(fromTemplate(config.urls.library.clone, { repo: repoName }), 'semantics.json', version, true);
       cache[dep].optionals = parseSemanticLibraries(cache[dep].semantics);
       return cache[dep].optionals;
     }
@@ -301,7 +302,7 @@ module.exports = {
       }
       else {
         list = toDo[dep].folder ? await getFile(`${config.folders.libraries}/${toDo[dep].folder}/library.json`, true)
-          : getRepoFile(fromTemplate(config.urls.library.clone, { org, repo: repoName }), 'library.json', version, true);
+          : getRepoFile(fromTemplate(config.urls.library.clone, { repo: repoName }), 'library.json', version, true);
         cache[dep] = list;
       }
       if (!list.title) {
@@ -383,11 +384,11 @@ module.exports = {
   },
   // list tags for library using git
   tags: (org, repo, mainBranch = 'master') => {
-    const library = getRepoFile(fromTemplate(config.urls.library.clone, { org, repo }), 'library.json', mainBranch, true);
+    const library = getRepoFile(fromTemplate(config.urls.library.clone, { repo }), 'library.json', mainBranch, true);
     const label = `${repo}_${mainBranch}`;
     const folder = `${config.folders.temp}/${label}`;
     if (!fs.existsSync(folder)) {
-      module.exports.clone(org, repo, mainBranch, label);
+      module.exports.clone(repo, mainBranch, label);
     }
     execSync(`git checkout ${mainBranch}`, { cwd: folder, stdio : 'pipe' });
     execSync(`git pull origin ${mainBranch}`, { cwd: folder, stdio : 'pipe' });
@@ -414,10 +415,6 @@ module.exports = {
     new admZip(zipFile).extractAllTo(config.folders.libraries);
     fs.rmSync(zipFile);
     fs.renameSync(`${config.folders.libraries}/${repo}-master`, target);
-  },
-  // clone repository using git
-  clone: (org, repo, branch, target) => {
-    return execSync(`git clone ${fromTemplate(config.urls.library.clone, {org, repo})} ${target} --branch ${branch}`, { cwd: config.folders.libraries }).toString();
   },
   /* clones/downloads dependencies to libraries folder using git and runs relevant npm commands
   mode - 'view' or 'edit' to fetch non-editor or editor libraries
@@ -459,7 +456,7 @@ module.exports = {
         await module.exports.download(list[item].org, list[item].repoName, version, folder);
       }
       else {
-        console.log(module.exports.clone(list[item].org, list[item].repoName, version, label));
+        console.log(module.exports.clone(list[item].repoName, version, label));
       }
       const packageFile = `${folder}/package.json`;
       if (!fs.existsSync(packageFile)) {
