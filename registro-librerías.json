@@ -241,6 +241,21 @@
         "runnable": true,
         "title": "Marcar palabras"
     },
+    "MathDisplay": {
+        "author": "Crompuverso",
+        "fullscreen": false,
+        "id": "MathDisplay",
+        "repo": {
+            "type": "github",
+            "url": "https://github.com/Crompuverso/h5p-math-display"
+        },
+        "resume": false,
+        "runnable": false,
+        "title": "PantallaMatemáticas",
+        "xapiVerbs": [
+            "attempted"
+        ]
+    },
     "MultiChoice": {
         "author": "Crompuverso",
         "id": "MultiChoice",
